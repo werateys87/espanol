@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg-primary: #f5f5f7;
+            --sidebar-bg: #ffffff;
+            --accent-yellow: #ffcc00;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --border: #d2d2d7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+        }
+
+        nav {
+            width: 250px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 30px 20px;
+        }
+
+        .back-link {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-yellow);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+        }
+
+        h1 { font-size: 40px; margin-bottom: 40px; }
+
+        .calligraphy-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .line {
+            font-family: "Georgia", serif;
+            font-style: italic;
+            font-size: 18px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f2f2f7;
+            color: #424245;
+        }
+
+        .num { color: var(--accent-yellow); font-weight: 800; margin-right: 15px; font-style: normal; }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="back-link">← Volver al Dashboard</a>
+        <div style="font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Actividad actual</div>
+        <p style="font-size: 14px; margin-top: 10px; font-weight: 600;">07. Caligrafía</p>
+    </nav>
+    <main>
+        <div style="font-size: 14px; color: var(--text-secondary); margin-bottom: 5px;">Martes 24 de Marzo del 2026</div>
+        <h1>Actividad 7: Caligrafía de Valor</h1>
+        
+        <div class="calligraphy-box">
+            <p style="font-weight: 700; margin-bottom: 20px;">Frase de refuerzo (10 repeticiones):</p>
+            <div class="line"><span class="num">1.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">2.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">3.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">4.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">5.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">6.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">7.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">8.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">9.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="line"><span class="num">10.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+        </div>
+    </main>
+</body>
+</html>
