@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg-primary: #f5f5f7;
+            --sidebar-bg: #ffffff;
+            --accent-orange: #ff9500;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --border: #d2d2d7;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* SIDEBAR */
+        nav {
+            width: 250px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .back-link {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-orange);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .nav-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+        }
+
+        .step-list {
+            list-style: none;
+        }
+
+        .step-item {
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: var(--text-secondary);
+        }
+
+        .step-item.active {
+            background: #f2f2f7;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        /* CONTENT CARDS */
+        .content-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+        }
+
+        .concept-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .concept-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--accent-orange);
+            border-radius: 2px;
+        }
+
+        .text-content {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #424245;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .example-pill {
+            background: var(--bg-primary);
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .example-pill span {
+            color: var(--accent-orange);
+            font-weight: 800;
+        }
+
+        .footer-info {
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver al Dashboard</a>
+        <div class="nav-title">Navegación</div>
+        <ul class="step-list">
+            <li class="step-item">01. Encuadre</li>
+            <li class="step-item">02. El Pastor Mentiroso</li>
+            <li class="step-item">03. Solidaridad (Cuestionario)</li>
+            <li class="step-item active">04. Solidaridad (Concepto)</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="header">
+            <div class="date">Jueves 19 de Marzo del 2026</div>
+            <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary);">Estudiante: Gabriela Cecilia Cervantes Macias</div>
+            <h1>Solidaridad<span style="color: var(--accent-orange);">.</span></h1>
+        </div>
+
+        <div class="content-section">
+            <div class="concept-title">Concepto de Solidaridad</div>
+            <div class="text-content">
+                <p>Es la actitud de apoyar y acompañar a otros, especialmente en dificultades. Significa colaborar desinteresadamente compartiendo tiempo o recursos para el bien común.</p>
+                <br>
+                <p>No solo implica lo material; brinda compañía y apoyo emocional, fortaleciendo lazos y promoviendo la empatía entre las personas.</p>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-pill"><span>•</span> Ayudar a un compañero en clase.</div>
+                <div class="example-pill"><span>•</span> Donar alimentos o ropa.</div>
+                <div class="example-pill"><span>•</span> Voluntariado en albergues.</div>
+                <div class="example-pill"><span>•</span> Escuchar a alguien en crisis.</div>
+                <div class="example-pill"><span>•</span> Brindar consuelo y apoyo.</div>
+                <div class="example-pill"><span>•</span> Compartir recursos con otros.</div>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            Materia: Lengua Española & Comunicación <br>
+            Docente: Mtra. Nadia Flores V.
+        </div>
+    </main>
+
+</body>
+</html>
