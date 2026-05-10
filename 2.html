@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg-primary: #f5f5f7;
+            --sidebar-bg: #ffffff;
+            --accent-blue: #007aff;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --border: #d2d2d7;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* SIDEBAR */
+        nav {
+            width: 250px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .back-link {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .nav-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+        }
+
+        .step-list {
+            list-style: none;
+        }
+
+        .step-item {
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .step-item.active {
+            background: #f2f2f7;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        /* QUESTION CARDS */
+        .question-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .q-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid transparent;
+            transition: border 0.2s;
+        }
+
+        .q-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .q-text {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .q-num {
+            color: var(--accent-blue);
+            font-weight: 800;
+        }
+
+        .a-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding-left: 32px;
+            line-height: 1.5;
+            border-left: 2px solid #f2f2f7;
+            margin-left: 8px;
+        }
+
+        /* MORALEJA HIGHLIGHT */
+        .moraleja {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #007aff, #0051a8);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .moraleja h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .moraleja p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver al Dashboard</a>
+        <div class="nav-title">Navegación</div>
+        <ul class="step-list">
+            <li class="step-item">01. Encuadre</li>
+            <li class="step-item active">02. El Pastor Mentiroso</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="header">
+            <div class="date">Martes 17 de Marzo del 2026</div>
+            <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary);">Estudiante: Gabriela Cecilia Cervantes Macias</div>
+            <h1>Cuestionario de Lectura<span style="color: var(--accent-blue);">.</span></h1>
+        </div>
+
+        <div class="question-grid">
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">1.</span> ¿Por qué el pastor comenzó a mentir?</div>
+                <div class="a-text">Para divertirse.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">2.</span> ¿Qué hicieron los campesinos cuando escucharon el primer grito?</div>
+                <div class="a-text">Corrieron a auxiliar al pastorcito.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">3.</span> ¿Cómo reaccionaron cuando gritó por tercera vez?</div>
+                <div class="a-text">Ya no quisieron ir a ayudar al pastorcito.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">4.</span> ¿Qué ocurrió cuando el lobo apareció de verdad?</div>
+                <div class="a-text">No ayudaron al pastorcito.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">5.</span> ¿Cuál es la moraleja?</div>
+                <div class="a-text">Si mientes una vez pierdes la confianza de los demás.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">6.</span> ¿Qué perdió el pastor por no decir la verdad?</div>
+                <div class="a-text">Perdió la confianza de los campesinos y de sus ovejas.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">7.</span> ¿Alguna vez has dicho una mentira para divertirte o evitar un problema?</div>
+                <div class="a-text">No.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">8.</span> ¿Cómo te sentiste después?</div>
+                <div class="a-text">No lo hice.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">9.</span> ¿Cómo te sientes cuando alguien no te dice la verdad?</div>
+                <div class="a-text">Mal, triste.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">10.</span> ¿Por qué crees que la confianza es importante en la amistad?</div>
+                <div class="a-text">Porque nos ayuda a poder entablar una buena amistad sin dudas.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">11.</span> ¿Qué harías diferente si estuvieras en el lugar del pastor?</div>
+                <div class="a-text">No mentiría.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text"><span class="q-num">12.</span> ¿Cómo puedes practicar la sinceridad en tu vida diaria?</div>
+                <div class="a-text">No mintiéndole a la gente de nuestro entorno y logrando que tengan confianza hacia nuestra persona.</div>
+            </div>
+        </div>
+
+        <div class="moraleja">
+            <h2>Moraleja Destacada</h2>
+            <p>"Nadie cree al mentiroso, ni siquiera cuando dice la verdad."</p>
+        </div>
+    </main>
+
+</body>
+</html>
