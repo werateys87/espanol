@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg-primary: #f5f5f7;
+            --sidebar-bg: #ffffff;
+            --accent-red: #ff3b30;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --border: #d2d2d7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* SIDEBAR DE NAVEGACIÓN INTERNA */
+        nav {
+            width: 250px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .back-link {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-red);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .nav-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+        }
+
+        .step {
+            padding: 12px;
+            border-radius: 10px;
+            background: #f2f2f7;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        main {
+            flex: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        /* TABLA DE EVALUACIÓN */
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--bg-primary);
+        }
+
+        td {
+            padding: 20px 15px;
+            border-bottom: 1px solid var(--bg-primary);
+            font-size: 16px;
+        }
+
+        .points {
+            font-weight: 700;
+            color: var(--accent-red);
+            width: 100px;
+        }
+
+        /* NOTAS Y POLÍTICAS */
+        .notes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .note-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .note-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .note-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver al Dashboard</a>
+        <div class="nav-title">Contenido</div>
+        <div class="step">01. Encuadre</div>
+    </nav>
+
+    <main>
+        <div class="header">
+            <div class="date">Jueves 12 de Marzo del 2026</div>
+            <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary);">Estudiante: Gabriela Cecilia Cervantes Macias</div>
+            <h1>Encuadre<span style="color: var(--accent-red);">.</span></h1>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Puntos</th>
+                        <th>Criterio de Evaluación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="points">40 pts</td>
+                        <td><strong>Actividades Entregadas:</strong> Completas, bien hechas y entregadas puntualmente.</td>
+                    </tr>
+                    <tr>
+                        <td class="points">10 pts</td>
+                        <td><strong>Conducta:</strong> Comportamiento adecuado dentro del salón de clases.</td>
+                    </tr>
+                    <tr>
+                        <td class="points">10 pts</td>
+                        <td><strong>Conducta en Honores:</strong> Participación y respeto en actos cívicos.</td>
+                    </tr>
+                    <tr>
+                        <td class="points">10 pts</td>
+                        <td><strong>Caligrafía:</strong> Legibilidad y limpieza en los trabajos escritos.</td>
+                    </tr>
+                    <tr>
+                        <td class="points">10 pts</td>
+                        <td><strong>Comprensión Lectora:</strong> Ejercicios de análisis y entendimiento de textos.</td>
+                    </tr>
+                    <tr>
+                        <td class="points">10 pts</td>
+                        <td><strong>Lista de Actividades:</strong> Organización y registro de los trabajos realizados.</td>
+                    </tr>
+                    <tr>
+                        <td class="points">10 pts</td>
+                        <td><strong>Proyectos:</strong> Desarrollo de trabajos especiales de la materia.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="notes-grid">
+            <div class="note-box">
+                <div class="note-title">POLÍTICA DE REVISIÓN</div>
+                <div class="note-content">
+                    No se revisan actividades atrasadas si no cuentan con el sello correspondiente. La puntualidad es fundamental.
+                </div>
+            </div>
+            <div class="note-box">
+                <div class="note-title">REUPERACIÓN Y PROYECTOS</div>
+                <div class="note-content">
+                    • Los puntos menos no se recuperan.<br>
+                    • No hay proyectos extras; solo se consideran las actividades realizadas en clase.
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
