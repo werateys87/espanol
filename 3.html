@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg-primary: #f5f5f7;
+            --sidebar-bg: #ffffff;
+            --accent-green: #34c759;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --border: #d2d2d7;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* SIDEBAR */
+        nav {
+            width: 250px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .back-link {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-green);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .nav-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+        }
+
+        .step-list {
+            list-style: none;
+        }
+
+        .step-item {
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .step-item.active {
+            background: #f2f2f7;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .activity-meta {
+            margin-top: 10px;
+            font-size: 16px;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        /* QUESTION CARDS */
+        .question-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .q-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: var(--card-shadow);
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .q-text {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .a-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding-left: 10px;
+        }
+
+        /* FOOTER INFO */
+        .footer-stamp {
+            margin-top: 50px;
+            padding: 20px;
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver al Dashboard</a>
+        <div class="nav-title">Navegación</div>
+        <ul class="step-list">
+            <li class="step-item">01. Encuadre</li>
+            <li class="step-item">02. El Pastor Mentiroso</li>
+            <li class="step-item active">03. Solidaridad</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="header">
+            <div class="date">Miércoles 18 de Marzo del 2026</div>
+            <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary);">Estudiante: Gabriela Cecilia Cervantes Macias</div>
+            <h1>Actividad 3<span style="color: var(--accent-green);">.</span></h1>
+            <div class="activity-meta">Aprendizajes previos: Valor Solidaridad</div>
+        </div>
+
+        <div class="question-grid">
+            <div class="q-card">
+                <div class="q-text">1. ¿Qué significa la solidaridad para ti?</div>
+                <div class="a-text">Apoyar y ayudar al otro para ser solidario, esto sin esperar algo a cambio.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">2. ¿Cómo has experimentado la solidaridad en tu vida?</div>
+                <div class="a-text">Ayudando o en que me ayudaron en algo.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">3. ¿Cuál crees que es el papel de la solidaridad en la construcción de una sociedad justa y equitativa?</div>
+                <div class="a-text">Un papel importante, ya que muchas veces se necesita esta para ser justos con todos.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">4. ¿Qué acciones puedes tomar para practicar la solidaridad en tu comunidad?</div>
+                <div class="a-text">Comentar los beneficios, practicarla.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">5. ¿Cómo puedes fomentar la solidaridad en tu entorno escolar?</div>
+                <div class="a-text">Practicándolo.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">6. ¿Cuáles son los desafíos que enfrenta la solidaridad en el mundo actual y cómo podemos superarlos?</div>
+                <div class="a-text">Muchos porque intentan evitarla.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">7. ¿Qué impacto tiene la solidaridad en la salud mental y emocional de las personas?</div>
+                <div class="a-text">Mucho ya que gracias a ella tenemos cosas positivas.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">8. ¿Cómo pueden las redes sociales y la tecnología ser utilizadas para promover la solidaridad?</div>
+                <div class="a-text">Grabando, publicando, informando.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">9. ¿Qué diferencias existen entre la solidaridad ocasional y la solidaridad comprometida?</div>
+                <div class="a-text">Que una es permanente y más valiosa que la ocasional.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-text">10. ¿Cuál es la relación entre la solidaridad y otros valores como la justicia, la empatía y la responsabilidad social?</div>
+                <div class="a-text">Que juntos pueden lograr grandes cosas.</div>
+            </div>
+        </div>
+
+        <div class="footer-stamp">
+            Revisado por: Mtra. Nadia Flores V. <br>
+            Fecha de revisión: 18 MAR 2026
+        </div>
+    </main>
+
+</body>
+</html>
