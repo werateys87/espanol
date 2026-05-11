@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --paper-blue: #e3f2fd;
+            --ink: #2c3e50;
+            --accent-red: #ff5252;
+            --stamp-blue: #1976d2;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; padding: 40px; }
+        .notebook-page { 
+            background: white; 
+            max-width: 850px; 
+            margin: auto; 
+            padding: 50px; 
+            border-radius: 4px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            min-height: 1100px;
+        }
+        .header { margin-bottom: 30px; text-align: left; }
+        .date { color: var(--accent-red); font-weight: bold; margin-bottom: 5px; font-size: 14px; }
+        .name { color: var(--ink); font-size: 14px; margin-bottom: 20px; }
+        
+        h1 { color: var(--accent-red); font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        .content { line-height: 1.8; }
+        .caligrafia-item { 
+            margin-bottom: 8px; 
+            font-style: italic; 
+            color: #555; 
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 4px;
+        }
+        .caligrafia-item span { color: var(--accent-red); font-weight: bold; margin-right: 10px; }
+
+        .extra-activity {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px dashed #ccc;
+        }
+
+        .qa-pair { margin-bottom: 20px; }
+        .question { font-weight: bold; color: var(--accent-red); display: block; margin-bottom: 5px; }
+        .answer { padding-left: 15px; color: var(--ink); border-left: 3px solid #eee; }
+
+        .stamp-container {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            transform: rotate(-5deg);
+        }
+        .stamp {
+            border: 4px solid var(--stamp-blue);
+            color: var(--stamp-blue);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: rgba(25, 118, 210, 0.05);
+        }
+        .stamp-text { font-size: 18px; display: block; }
+        .stamp-date { font-size: 14px; }
+        .stamp-footer { font-size: 10px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="notebook-page">
+        <div class="header">
+            <div class="date">Martes 24 de Marzo del 2026</div>
+            <div class="name">NaS</div>
+        </div>
+
+        <h1>Actividad 7: Caligrafía valor Solidaridad (10 veces)</h1>
+        
+        <div class="content">
+            <div class="caligrafia-item"><span>1.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>2.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>3.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>4.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>5.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>6.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>7.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>8.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>9.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+            <div class="caligrafia-item"><span>10.</span> La solidaridad es el sentimiento que mejor expresa el respeto por la dignidad humana.</div>
+        </div>
+
+        <div class="extra-activity">
+            <div class="date">Miércoles 25 de Marzo del 2026</div>
+            <h1>Análisis de Caso: Diego y la Solidaridad</h1>
+            
+            <div class="qa-pair">
+                <span class="question">1. ¿Por qué los compañeros no ayudaron a Diego al inicio?</span>
+                <p class="answer">Por su aspecto.</p>
+            </div>
+            <div class="qa-pair">
+                <span class="question">2. ¿Qué riesgos tomó Valeria al actuar?</span>
+                <p class="answer">Que le dejaran de hablar.</p>
+            </div>
+            <div class="qa-pair">
+                <span class="question">3. ¿La solidaridad siempre tiene consecuencias positivas?</span>
+                <p class="answer">La mayoría, ya que a veces toman mal que ayudes.</p>
+            </div>
+            <div class="qa-pair">
+                <span class="question">6. ¿Qué enseñanza te deja la historia para tu vida diaria?</span>
+                <p class="answer">Que debemos ayudar a los demás y no juzgar.</p>
+            </div>
+        </div>
+
+        <div class="stamp-container">
+            <div class="stamp">
+                <span class="stamp-text">REVISADO</span>
+                <span class="stamp-date">24-25 MAR 2026</span>
+                <div class="stamp-footer">Mtra. Nadia Flores V. | LENGUA MATERNA</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
